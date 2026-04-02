@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Projetos · Open Teamwork</title>
+    <link rel="icon" type="image/png" href="../assets/OTW Logo.png" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">
+          <img
+            src="../assets/OTW Logo.png"
+            alt="Open Teamwork Logo"
+            class="brand-logo"
+          />
+          Open Teamwork
+          <span class="prototype-badge">Prototipo</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="../index.html" class="nav-link">Explorar</a>
+          <a
+            href="./meus-projetos.html"
+            class="nav-link active"
+            aria-current="page"
+            >Meus Projetos</a
+          >
+          <a href="./perfil.html" class="nav-link">Perfil</a>
+          <a href="./sobre.html" class="nav-link">Sobre</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="page-toolbar">
+        <h1>Meus Projetos</h1>
+        <button id="btn-new-project" class="btn-primary">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <path
+              fill-rule="evenodd"
+              d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.75 4.75a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z"
+            ></path>
+          </svg>
+          Novo Projeto
+        </button>
+      </div>
+
+      <div id="projects-list">
+        <!-- Projetos serão inseridos aqui -->
+      </div>
+    </div>
+
+    <!-- Modal de criação de projeto -->
+    <div
+      id="create-project-modal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="create-project-title"
+    >
+      <div class="modal-content modal-large">
+        <div class="modal-header">
+          <h2 id="create-project-title" class="modal-title">
+            Criar Novo Projeto
+          </h2>
+          <button
+            id="close-create-project"
+            class="close-button"
+            aria-label="Fechar"
+          >
+            <svg viewBox="0 0 16 16" width="16" height="16">
+              <path
+                fill-rule="evenodd"
+                d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body modal-body-large">
+          <form id="project-form">
+            <div class="form-group">
+              <label for="project-name">Nome do Projeto *</label>
+              <input
+                type="text"
+                id="project-name"
+                required
+                placeholder="Ex: react-dashboard"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="project-owner">Host *</label>
+              <input
+                type="text"
+                id="project-owner"
+                required
+                placeholder="Seu nome de usuário"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="project-description">Descrição *</label>
+              <textarea
+                id="project-description"
+                required
+                rows="3"
+                placeholder="Descreva brevemente o projeto..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="project-url">URL</label>
+              <input
+                type="url"
+                id="project-url"
+                placeholder="https://github.com/usuario/repo"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Qualificações Necessárias *</label>
+              <div id="qualifications-inputs">
+                <div class="qualification-input-row">
+                  <input
+                    type="text"
+                    class="qual-name"
+                    placeholder="Ex: Frontend Developer"
+                    required
+                  />
+                  <input
+                    type="number"
+                    class="qual-total"
+                    placeholder="Total"
+                    min="1"
+                    value="1"
+                    required
+                  />
+                  <button type="button" class="btn-remove-qual" disabled>
+                    −
+                  </button>
+                </div>
+              </div>
+              <button type="button" id="btn-add-qual" class="btn-secondary">
+                + Adicionar Qualificação
+              </button>
+            </div>
+
+            <div class="form-group">
+              <label for="project-tags">Tags (separadas por vírgula)</label>
+              <input
+                type="text"
+                id="project-tags"
+                placeholder="JavaScript, React, Node.js"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-actions">
+          <button
+            id="cancel-create-project"
+            type="button"
+            class="btn-secondary"
+          >
+            Cancelar
+          </button>
+          <button id="save-project" type="button" class="btn-primary">
+            Criar Projeto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/meus-projetos.js"></script>
+  </body>
+</html>

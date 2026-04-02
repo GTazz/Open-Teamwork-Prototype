@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil · Open Teamwork</title>
+    <link rel="icon" type="image/png" href="../assets/OTW Logo.png" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">
+          <img
+            src="../assets/OTW Logo.png"
+            alt="Open Teamwork Logo"
+            class="brand-logo"
+          />
+          Open Teamwork
+          <span class="prototype-badge">Prototipo</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="../index.html" class="nav-link">Explorar</a>
+          <a href="./meus-projetos.html" class="nav-link">Meus Projetos</a>
+          <a href="./perfil.html" class="nav-link active" aria-current="page"
+            >Perfil</a
+          >
+          <a href="./sobre.html" class="nav-link">Sobre</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container profile-page" data-profile-app>
+      <section class="profile-hero">
+        <div data-login-hero>
+          <h1>Login</h1>
+          <p>
+            Entre em sua conta ou crie uma nova para fazer parte de nossa
+            comunidade.
+          </p>
+        </div>
+        <div class="hidden" data-profile-hero>
+          <h1>Perfil</h1>
+        </div>
+      </section>
+
+      <section class="auth-panel" data-auth-panel>
+        <div class="auth-tabs" role="tablist" aria-label="Acesso à conta">
+          <button
+            type="button"
+            class="auth-tab active"
+            data-auth-tab="login"
+            aria-selected="true"
+          >
+            Entrar
+          </button>
+          <button
+            type="button"
+            class="auth-tab"
+            data-auth-tab="signup"
+            aria-selected="false"
+          >
+            Criar conta
+          </button>
+        </div>
+
+        <p class="form-message hidden" data-auth-message aria-live="polite"></p>
+
+        <div class="auth-form-stack">
+          <form class="auth-form" data-auth-form="login" autocomplete="on">
+            <div class="auth-form-header">
+              <h2>Entrar</h2>
+              <p>Use seu e-mail e senha para acessar o perfil.</p>
+            </div>
+
+            <div class="auth-grid">
+              <div class="form-group span-2">
+                <label for="login-email">E-mail</label>
+                <input
+                  type="email"
+                  name="login-email"
+                  id="login-email"
+                  autocomplete="email"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  placeholder="voce@exemplo.com"
+                  required
+                />
+              </div>
+              <div class="form-group span-2">
+                <label for="login-password">Senha</label>
+                <input
+                  type="password"
+                  name="login-password"
+                  id="login-password"
+                  autocomplete="current-password"
+                  placeholder="Sua senha"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="auth-actions">
+              <button type="submit" class="btn-primary">Entrar</button>
+            </div>
+          </form>
+
+          <form
+            class="auth-form hidden"
+            data-auth-form="signup"
+            autocomplete="on"
+          >
+            <div class="auth-form-header">
+              <h2>Criar conta</h2>
+              <p>
+                Cadastre-se com e-mail e senha para começar a editar seu perfil.
+              </p>
+            </div>
+
+            <div class="auth-grid">
+              <div class="form-group span-2">
+                <label for="signup-name">Nome</label>
+                <input
+                  type="text"
+                  name="signup-name"
+                  id="signup-name"
+                  autocomplete="name"
+                  placeholder="Seu nome"
+                  required
+                />
+              </div>
+              <div class="form-group span-2">
+                <label for="signup-email">E-mail</label>
+                <input
+                  type="email"
+                  name="signup-email"
+                  id="signup-email"
+                  autocomplete="email"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  placeholder="voce@exemplo.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="signup-password">Senha</label>
+                <input
+                  type="password"
+                  name="signup-password"
+                  id="signup-password"
+                  autocomplete="new-password"
+                  minlength="6"
+                  placeholder="Mínimo de 6 caracteres"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="signup-confirm-password">Confirmar senha</label>
+                <input
+                  type="password"
+                  name="signup-confirm-password"
+                  id="signup-confirm-password"
+                  autocomplete="new-password"
+                  minlength="6"
+                  placeholder="Repita a senha"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="auth-actions">
+              <button type="submit" class="btn-primary">Criar conta</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="profile-panel hidden" data-profile-panel>
+        <div class="profile-panel-header">
+          <div>
+            <h2 data-profile-name-display></h2>
+            <p data-profile-email-display></p>
+          </div>
+          <button type="button" class="btn-secondary" data-logout-button>
+            Sair
+          </button>
+        </div>
+
+        <p
+          class="form-message hidden"
+          data-profile-message
+          aria-live="polite"
+        ></p>
+
+        <form class="profile-form" data-profile-form>
+          <div class="profile-grid">
+            <section class="profile-card avatar-card">
+              <h3>Foto de perfil</h3>
+              <div class="avatar-preview" data-avatar-preview></div>
+              <div class="avatar-actions">
+                <label
+                  for="profile-avatar"
+                  class="btn-primary avatar-upload-button"
+                  data-avatar-upload
+                >
+                  Enviar imagem
+                </label>
+                <button type="button" class="btn-secondary" data-avatar-remove>
+                  Remover foto
+                </button>
+              </div>
+              <input
+                type="file"
+                id="profile-avatar"
+                accept="image/*"
+                class="hidden"
+              />
+            </section>
+
+            <section class="profile-card">
+              <h3>Informações principais</h3>
+              <div class="profile-field-grid">
+                <div class="form-group span-2">
+                  <label for="profile-name">Nome</label>
+                  <input type="text" id="profile-name" required />
+                </div>
+                <div class="form-group span-2">
+                  <label for="profile-bio">Descrição pessoal</label>
+                  <textarea
+                    id="profile-bio"
+                    rows="5"
+                    placeholder="Conte um pouco sobre você, seus interesses e objetivos."
+                  ></textarea>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="profile-card">
+            <h3>Contato</h3>
+            <div class="profile-field-grid">
+              <div class="form-group span-2">
+                <label for="profile-email">E-mail</label>
+                <input
+                  type="email"
+                  id="profile-email"
+                  placeholder="voce@exemplo.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="profile-phone">Telefone</label>
+                <input
+                  type="tel"
+                  id="profile-phone"
+                  placeholder="(00) 00000-0000"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="profile-card">
+            <h3>Redes sociais e sites pessoais</h3>
+            <div class="profile-field-grid">
+              <div class="form-group">
+                <label for="profile-github">GitHub</label>
+                <div class="url-field">
+                  <span class="url-prefix" aria-hidden="true"
+                    >https://github.com/</span
+                  >
+                  <input
+                    type="text"
+                    id="profile-github"
+                    placeholder="seu-usuario"
+                    autocapitalize="off"
+                    spellcheck="false"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="profile-linkedin">LinkedIn</label>
+                <div class="url-field">
+                  <span class="url-prefix" aria-hidden="true"
+                    >https://www.linkedin.com/in/</span
+                  >
+                  <input
+                    type="text"
+                    id="profile-linkedin"
+                    placeholder="seu-perfil"
+                    autocapitalize="off"
+                    spellcheck="false"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="profile-website">Site pessoal</label>
+                <input
+                  type="url"
+                  id="profile-website"
+                  placeholder="https://seusite.com"
+                />
+              </div>
+            </div>
+          </section>
+
+          <div class="profile-actions hidden" data-profile-actions>
+            <button type="button" class="btn-secondary" data-profile-reset>
+              Descartar alterações
+            </button>
+            <button type="submit" class="btn-primary">Salvar perfil</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../js/perfil.js"></script>
+  </body>
+</html>

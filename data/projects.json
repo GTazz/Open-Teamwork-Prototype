@@ -1,0 +1,331 @@
+[
+  {
+    "id": 1,
+    "name": "Open United Campus Platform",
+    "owner": "João Silva",
+    "description": "Plataforma colaborativa para universidades, conectando estudantes a projetos open-source com times multidisciplinares.",
+    "qualifications": [
+      {
+        "name": "Desenvolvedor Frontend React",
+        "filled": 1,
+        "total": 3
+      },
+      {
+        "name": "Desenvolvedor Backend Node.js",
+        "filled": 1,
+        "total": 3
+      },
+      {
+        "name": "Designer UI/UX",
+        "filled": 0,
+        "total": 2
+      },
+      {
+        "name": "Engenheiro DevOps",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Engenheiro de QA",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Gerente de Comunidade",
+        "filled": 1,
+        "total": 1
+      },
+      {
+        "name": "Mentor Fullstack",
+        "filled": 1,
+        "total": 1
+      }
+    ],
+    "tags": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+      "Education",
+      "Open Source",
+      "Collaboration",
+      "Web"
+    ],
+    "url": "https://github.com/OpenUC/open-united-campus"
+  },
+  {
+    "id": 2,
+    "name": "ML Research Toolkit",
+    "owner": "Mariana Souza",
+    "description": "Toolkit para pesquisa em Machine Learning com pipelines, notebooks e modelos pré-treinados.",
+    "qualifications": [
+      {
+        "name": "Desenvolvedor Python",
+        "filled": 2,
+        "total": 3
+      },
+      {
+        "name": "Engenheiro de ML",
+        "filled": 1,
+        "total": 2
+      },
+      {
+        "name": "Cientista de Dados",
+        "filled": 0,
+        "total": 2
+      },
+      {
+        "name": "Engenheiro MLOps",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Líder de Documentação",
+        "filled": 1,
+        "total": 1
+      },
+      {
+        "name": "Mantenedor de Infraestrutura",
+        "filled": 1,
+        "total": 1
+      }
+    ],
+    "tags": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLOps",
+      "Notebooks",
+      "Pipelines",
+      "Data"
+    ],
+    "url": "https://github.com/ai-lab/ml-research-toolkit"
+  },
+  {
+    "id": 3,
+    "name": "Smart Greenhouse IoT",
+    "owner": "Pedro Oliveira",
+    "description": "Monitoramento e automação de estufas com sensores, ESP32, MQTT e painel web em tempo real.",
+    "qualifications": [
+      {
+        "name": "Engenheiro Embarcado (C/C++)",
+        "filled": 1,
+        "total": 2
+      },
+      {
+        "name": "Desenvolvedor de Firmware (ESP32)",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Engenheiro Cloud (AWS IoT)",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Desenvolvedor Frontend Dashboard",
+        "filled": 0,
+        "total": 2
+      },
+      {
+        "name": "Analista de Dados",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Arquiteto de Hardware",
+        "filled": 1,
+        "total": 1
+      },
+      {
+        "name": "Testador de Campo",
+        "filled": 2,
+        "total": 2
+      }
+    ],
+    "tags": [
+      "IoT",
+      "Embedded",
+      "ESP32",
+      "MQTT",
+      "AWS",
+      "Sensors",
+      "Agriculture",
+      "Edge",
+      "Dashboard"
+    ],
+    "url": "https://github.com/agritech/smart-greenhouse"
+  },
+  {
+    "id": 4,
+    "name": "Mobile Health Tracker",
+    "owner": "Ana Pereira",
+    "description": "Aplicativo de saúde com Flutter, integração BLE com wearables e backend em Go.",
+    "qualifications": [
+      {
+        "name": "Desenvolvedor Flutter",
+        "filled": 1,
+        "total": 2
+      },
+      {
+        "name": "Desenvolvedor de API Backend (Go)",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Engenheiro de QA Mobile",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Pesquisador de UX",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Engenheiro de Segurança",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Especialista em Conformidade (LGPD)",
+        "filled": 1,
+        "total": 1
+      },
+      {
+        "name": "Líder de Testes Beta",
+        "filled": 1,
+        "total": 1
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Android",
+      "iOS",
+      "Go",
+      "REST API",
+      "Health",
+      "Wearables",
+      "BLE",
+      "Security"
+    ],
+    "url": "https://github.com/health-tech/mobile-health-tracker"
+  },
+  {
+    "id": 5,
+    "name": "FinPay Payments API",
+    "owner": "Lucas Santos",
+    "description": "API de pagamentos com NestJS, PostgreSQL e Kafka, focada em segurança e escalabilidade.",
+    "qualifications": [
+      {
+        "name": "Desenvolvedor Backend (TypeScript/NestJS)",
+        "filled": 1,
+        "total": 3
+      },
+      {
+        "name": "Engenheiro de Segurança (OWASP)",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Administrador de Banco de Dados (PostgreSQL)",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "DevOps (Kubernetes)",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Redator Técnico",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Líder SRE",
+        "filled": 1,
+        "total": 1
+      },
+      {
+        "name": "Oficial de Conformidade PCI",
+        "filled": 1,
+        "total": 1
+      }
+    ],
+    "tags": [
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "Kafka",
+      "Kubernetes",
+      "CI/CD",
+      "Payments",
+      "FinTech",
+      "Security"
+    ],
+    "url": "https://github.com/finpay/finpay-payments-api"
+  },
+  {
+    "id": 6,
+    "name": "Open Maps Visualization Portal",
+    "owner": "Sofia Rodrigues",
+    "description": "Portal de visualização de dados abertos com mapas interativos (Leaflet/Mapbox) e gráficos em D3.js.",
+    "qualifications": [
+      {
+        "name": "Visualização de Dados Frontend (D3.js)",
+        "filled": 1,
+        "total": 2
+      },
+      {
+        "name": "Especialista em GIS",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Backend GeoServer/PostGIS",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Especialista em Acessibilidade",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Redator de Conteúdo",
+        "filled": 0,
+        "total": 1
+      },
+      {
+        "name": "Designer de Mapas (Cartografia)",
+        "filled": 1,
+        "total": 1
+      },
+      {
+        "name": "Curador de Dados Abertos",
+        "filled": 2,
+        "total": 2
+      }
+    ],
+    "tags": [
+      "Maps",
+      "GIS",
+      "Leaflet",
+      "Mapbox",
+      "D3.js",
+      "PostGIS",
+      "GeoServer",
+      "Accessibility",
+      "Open Data",
+      "Visualization"
+    ],
+    "url": "https://github.com/geo-open/open-maps-portal"
+  }
+]

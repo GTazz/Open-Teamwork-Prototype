@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Teamwork</title>
+    <link rel="icon" type="image/png" href="./assets/OTW Logo.png" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html">
+          <img
+            src="./assets/OTW Logo.png"
+            alt="Open Teamwork Logo"
+            class="brand-logo"
+          />
+          Open Teamwork
+          <span class="prototype-badge">Prototipo</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="./index.html" class="nav-link active" aria-current="page"
+            >Explorar</a
+          >
+          <a href="./pages/meus-projetos.html" class="nav-link"
+            >Meus Projetos</a
+          >
+          <a href="./pages/perfil.html" class="nav-link">Perfil</a>
+          <a href="./pages/sobre.html" class="nav-link">Sobre</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Projetos em Destaque</h1>
+      <p id="repo-counter">Carregando projetos...</p>
+      <div class="repo-grid" id="repo-grid">
+        <!-- Projetos serão inseridos aqui dinamicamente -->
+      </div>
+    </div>
+
+    <!-- Modal de candidatura -->
+    <div
+      id="apply-modal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="apply-modal-title"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="apply-modal-title" class="modal-title">
+            Escolha as qualificações
+          </h2>
+        </div>
+        <div class="modal-body">
+          <p id="apply-modal-repo"></p>
+          <div id="qualifications-container" class="qualifications-list">
+            <!-- Checkboxes inseridos via JS -->
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button id="cancel-apply" type="button" class="btn-secondary">
+            Cancelar
+          </button>
+          <button id="confirm-apply" type="button" class="btn-primary" disabled>
+            Confirmar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de detalhes do projeto -->
+    <div
+      id="details-modal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="details-modal-title"
+    >
+      <div class="modal-content modal-large">
+        <div class="modal-header">
+          <h2 id="details-modal-title" class="modal-title"></h2>
+          <button id="close-details" class="close-button" aria-label="Fechar">
+            <svg viewBox="0 0 16 16" width="16" height="16">
+              <path
+                fill-rule="evenodd"
+                d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body modal-body-large" id="details-content">
+          <!-- Conteúdo inserido via JS -->
+        </div>
+        <div class="modal-actions">
+          <button id="details-apply" type="button" class="btn-primary">
+            Candidatar-se
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/projects.js"></script>
+  </body>
+</html>
