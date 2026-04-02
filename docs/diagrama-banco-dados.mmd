@@ -1,0 +1,40 @@
+erDiagram
+    USUARIO ||--|| PERFIL : possui
+    USUARIO ||--o{ PROJETO : cria
+    PROJETO ||--o{ VAGA_QUALIFICACAO : define
+    USUARIO ||--o{ INSCRICAO : realiza
+    PROJETO ||--o{ INSCRICAO : recebe
+
+    USUARIO {
+      string nome
+      string email
+      string senha_hash
+    }
+
+    PERFIL {
+      string email_contato
+      string telefone
+      string bio
+      string avatar_url
+      string github_url
+      string linkedin_url
+      string website_url
+    }
+
+    PROJETO {
+      string nome
+      string descricao
+      string url
+      string tags
+    }
+
+    VAGA_QUALIFICACAO {
+      string nome_qualificacao
+      int total_vagas
+      int vagas_preenchidas
+    }
+
+    INSCRICAO {
+      string status
+      string qualificacoes_selecionadas
+    }
