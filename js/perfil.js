@@ -497,11 +497,13 @@ function handleLoginSubmit(event) {
   const password = String(loginPasswordInput?.value || '');
 
   if (!email || !password) {
+    showMessage(authMessage, 'Preencha e-mail e senha para entrar.', 'error');
     return;
   }
 
   const account = getAccount(email);
   if (!account || account.password !== password) {
+    showMessage(authMessage, 'E-mail ou senha inválidos.', 'error');
     return;
   }
 
@@ -525,19 +527,23 @@ function handleSignupSubmit(event) {
   const confirmPassword = String(signupConfirmPasswordInput?.value || '');
 
   if (!name || !email || !password || !confirmPassword) {
+    showMessage(authMessage, 'Preencha todos os campos para criar a conta.', 'error');
     return;
   }
 
   if (password.length < 6) {
+    showMessage(authMessage, 'A senha deve ter pelo menos 6 caracteres.', 'error');
     return;
   }
 
   if (password !== confirmPassword) {
+    showMessage(authMessage, 'A confirmação de senha não confere.', 'error');
     return;
   }
 
   const accounts = getAccounts();
   if (accounts[email]) {
+    showMessage(authMessage, 'Já existe uma conta com este e-mail.', 'error');
     return;
   }
 
